@@ -1,0 +1,43 @@
+## Fluxo Geral do Sistema – enandes-processing
+
+Fluxo simplificado dos principais scripts do diretório  
+`/home/jurandir/enandes-processing/batch/`.
+
+```mermaid
+flowchart TB
+    %% Estilos
+    classDef inicio fill:#4CAF50,stroke:#2E7D32,color:#fff,font-weight:bold
+    classDef decisao fill:#FFC107,stroke:#FF9800,color:#000,font-weight:bold
+    classDef script fill:#03A9F4,stroke:#0288D1,color:#fff
+    classDef processo fill:#9C27B0,stroke:#6A1B9A,color:#fff
+    classDef fim fill:#F44336,stroke:#B71C1C,color:#fff,font-weight:bold
+
+    %% Nós
+    A([🚀 Início]):::inicio --> B{📂 Selecionar<br>produto}:::decisao
+
+    %% Caminhos de escolha
+    B --> C1[📜 MERGE-DAILY<br>operacional_process_merge_daily.py]:::script
+    B --> C2[📜 MERGE-HOURLY<br>operacional_process_merge_hourly.py]:::script
+    B --> C3[📜 Climatologia Diária<br>operacional_process_merge_climatology_daily.py]:::script
+    B --> C4[📜 Climatologia Mensal<br>operacional_process_merge_climatology_monthly.py]:::script
+    B --> C5[📜 Climatologia Mensal<br>Acumulada Ano<br>operacional_process_merge_climatology_monthly_yearly.py]:::script
+    B --> C6[📜 Climatologia Anual<br>Acumulada<br>operacional_process_merge_climatology_year_acc.py]:::script
+    B --> C7[📜 SPI/SPEI<br>operacional_process_merge_SPIeSPEI.py]:::script
+    B --> C8[📜 Processamento Geral<br>operacional_process_merge.py]:::script
+
+    %% Passos comuns
+    C1 --> D[⬇️ Download via módulo<br>downloader]:::processo
+    C2 --> D
+    C3 --> D
+    C4 --> D
+    C5 --> D
+    C6 --> D
+    C7 --> D
+    C8 --> D
+
+    D --> E[🖼 Conversão para GeoTIFF<br>(merge2tif.py)]:::processo
+    E --> F[🗄 Atualização no PostGIS<br>(merge_index)]:::processo
+    F --> G[🌐 Publicação no GeoServer<br>via ImageMosaic]:::processo
+    G --> H[🎨 Aplicação do estilo<br>SLD específico]:::processo
+    H --> I([🏁 Fim]):::fim
+

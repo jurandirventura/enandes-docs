@@ -1,0 +1,44 @@
+site_name: ENANDES Processing Docs
+theme:
+  name: material
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.extra
+  - pymdownx.tasklist
+  - pymdownx.tabbed
+  - pymdownx.tilde
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.keys
+  - pymdownx.emoji
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.caret
+
+
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js
+  - js/mermaid-init.js
+
+plugins:
+  - search
+
+nav:
+  - Início: index.md
+  - Introdução: introduction.md
+  - Tecnologias Utilizadas: technology_used.md
+  - Entrada e Saída: input_output.md
+  - Publicação no GeoServer: publish_geoserver.md
+  - Manual do Usuário: user_manual.md
+  - Fluxo MERGE-Daily: fluxo_merge_daily.md
+  - Fluxo Geral: fluxo_geral.md
+  - Teste Mermaid: teste-mermaid.md
+

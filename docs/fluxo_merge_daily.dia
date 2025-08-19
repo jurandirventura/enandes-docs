@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dia:diagram xmlns:dia="http://www.lysator.liu.se/~alla/dia/">
+  <dia:layer name="Fluxo MERGE Daily" visible="true" active="true">
+    
+    <!-- Início -->
+    <dia:object type="Standard - Ellipse" version="0" id="O0">
+      <dia:attribute name="obj_pos">
+        <dia:point val="2,2"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="1.5,1.5;2.5,2.5"/>
+      </dia:attribute>
+      <dia:attribute name="text">
+        <dia:composite type="text">
+          <dia:attribute name="string">
+            <dia:string>#Início#</dia:string>
+          </dia:attribute>
+        </dia:composite>
+      </dia:attribute>
+    </dia:object>
+
+    <!-- Download -->
+    <dia:object type="Standard - Box" version="0" id="O1">
+      <dia:attribute name="obj_pos">
+        <dia:point val="2,4"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="1,3.5;3,4.5"/>
+      </dia:attribute>
+      <dia:attribute name="text">
+        <dia:composite type="text">
+          <dia:attribute name="string">
+            <dia:string>#Download Dados MERGE#</dia:string>
+          </dia:attribute>
+        </dia:composite>
+      </dia:attribute>
+    </dia:object>
+
+    <!-- Processamento -->
+    <dia:object type="Standard - Box" version="0" id="O2">
+      <dia:attribute name="obj_pos">
+        <dia:point val="2,6"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="1,5.5;3,6.5"/>
+      </dia:attribute>
+      <dia:attribute name="text">
+        <dia:composite type="text">
+          <dia:attribute name="string">
+            <dia:string>#Processamento GeoTIFF#</dia:string>
+          </dia:attribute>
+        </dia:composite>
+      </dia:attribute>
+    </dia:object>
+
+    <!-- Publicação -->
+    <dia:object type="Standard - Box" version="0" id="O3">
+      <dia:attribute name="obj_pos">
+        <dia:point val="2,8"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="1,7.5;3,8.5"/>
+      </dia:attribute>
+      <dia:attribute name="text">
+        <dia:composite type="text">
+          <dia:attribute name="string">
+            <dia:string>#Publicação no GeoServer#</dia:string>
+          </dia:attribute>
+        </dia:composite>
+      </dia:attribute>
+    </dia:object>
+
+    <!-- Fim -->
+    <dia:object type="Standard - Ellipse" version="0" id="O4">
+      <dia:attribute name="obj_pos">
+        <dia:point val="2,10"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="1.5,9.5;2.5,10.5"/>
+      </dia:attribute>
+      <dia:attribute name="text">
+        <dia:composite type="text">
+          <dia:attribute name="string">
+            <dia:string>#Fim#</dia:string>
+          </dia:attribute>
+        </dia:composite>
+      </dia:attribute>
+    </dia:object>
+
+    <!-- Conexões -->
+    <dia:object type="Standard - Line" version="0" id="L0">
+      <dia:attribute name="connections">
+        <dia:connection handle="0" to="O0" connection="5"/>
+        <dia:connection handle="1" to="O1" connection="1"/>
+      </dia:attribute>
+    </dia:object>
+
+    <dia:object type="Standard - Line" version="0" id="L1">
+      <dia:attribute name="connections">
+        <dia:connection handle="0" to="O1" connection="5"/>
+        <dia:connection handle="1" to="O2" connection="1"/>
+      </dia:attribute>
+    </dia:object>
+
+    <dia:object type="Standard - Line" version="0" id="L2">
+      <dia:attribute name="connections">
+        <dia:connection handle="0" to="O2" connection="5"/>
+        <dia:connection handle="1" to="O3" connection="1"/>
+      </dia:attribute>
+    </dia:object>
+
+    <dia:object type="Standard - Line" version="0" id="L3">
+      <dia:attribute name="connections">
+        <dia:connection handle="0" to="O3" connection="5"/>
+        <dia:connection handle="1" to="O4" connection="1"/>
+      </dia:attribute>
+    </dia:object>
+
+  </dia:layer>
+  <dia:attribute name="background">
+    <dia:color val="#ffffff"/>
+  </dia:attribute>
+  <dia:attribute name="paper">
+    <dia:composite type="paper">
+      <dia:attribute name="name">
+        <dia:string>Letter</dia:string>
+      </dia:attribute>
+      <dia:attribute name="tmargin">
+        <dia:real val="2.54"/>
+      </dia:attribute>
+      <dia:attribute name="bmargin">
+        <dia:real val="2.54"/>
+      </dia:attribute>
+      <dia:attribute name="lmargin">
+        <dia:real val="2.54"/>
+      </dia:attribute>
+      <dia:attribute name="rmargin">
+        <dia:real val="2.54"/>
+      </dia:attribute>
+    </dia:composite>
+  </dia:attribute>
+</dia:diagram>

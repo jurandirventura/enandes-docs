@@ -1,0 +1,31 @@
+name: Deploy ENANDES Docs
+
+on:
+  push:
+    branches:
+      - main   # ou o branch principal do seu repo
+
+permissions:
+  contents: write   # necessário para publicar no branch gh-pages
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar dependências
+        run: |
+          pip install mkdocs mkdocs-material pymdown-extensions
+
+      - name: Publicar site no GitHub Pages
+        run: |
+          mkdocs gh-deploy --force
+

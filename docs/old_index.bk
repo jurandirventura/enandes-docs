@@ -1,0 +1,32 @@
+# Welcome to MkDocs
+
+For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+
+## Commands
+
+* `mkdocs new [dir-name]` - Create a new project.
+* `mkdocs serve` - Start the live-reloading docs server.
+* `mkdocs build` - Build the documentation site.
+* `mkdocs -h` - Print help message and exit.
+
+## Project layout
+
+    mkdocs.yml    # The configuration file.
+    docs/
+        index.md  # The documentation homepage.
+        ...       # Other markdown pages, images and other files.
+
+site_name: ENANDES Processing Docs
+theme:
+  name: material
+
+nav:
+  - Início: index.md
+  - Introdução: introduction.md
+  - Tecnologias Utilizadas: technology_used.md
+  - Entrada e Saída: input_output.md
+  - Publicação no GeoServer: publish_geoserver.md
+  - Manual do Usuário: user_manual.md
+  - Fluxo MERGE-Daily: fluxo_merge_daily.md
+  - Fluxo Geral: fluxo_geral.md
+
