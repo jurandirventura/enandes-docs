@@ -29,9 +29,7 @@ O sistema foi projetado para uso no contexto do **Projeto ENANDES**, apoiado pel
 | [Entrada e Saída](input_output.md) | Estrutura dos dados de entrada e saída |
 | [Publicação no GeoServer](publish_geoserver.md) | Processo de disponibilização das camadas |
 | [Manual do Usuário](user_manual.md) | Passos para instalação e operação |
-| [Fluxo MERGE-Daily](fluxo_merge_daily.md) | Diagrama do processo diário |
 | [Fluxo Geral](fluxo_geral.md) | Visão completa da arquitetura |
-| [teste](teste-mermaid.md) | Visão completa da arquitetura |
 ---
 
 ## 🚀 Acesso Rápido

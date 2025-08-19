@@ -38,7 +38,5 @@ nav:
   - Entrada e Saída: input_output.md
   - Publicação no GeoServer: publish_geoserver.md
   - Manual do Usuário: user_manual.md
-  - Fluxo MERGE-Daily: fluxo_merge_daily.md
   - Fluxo Geral: fluxo_geral.md
-  - Teste Mermaid: teste-mermaid.md
 
