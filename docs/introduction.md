@@ -41,8 +41,10 @@ O sistema é baseado em **scripts Python** organizados para:
 - Aplicar estilos **SLD** para visualização.
 
 **Estrutura de diretórios:**
+
 $HOME/enandes-processing
-- ├── batch # Scripts de processamento e publicação
-- ├── config # Arquivos de configuração JSON
-- ├── downloaders # Módulos de download (MERGE, SPI, SPEI etc.)
-- ├── utils # Funções auxiliares
+
+- ├── batch # Scripts de processamento e publicação;
+- ├── config # Arquivos de configuração JSON;
+- ├── downloaders # Módulos de download (MERGE, SPI, SPEI etc.);
+- ├── utils # Funções auxiliares;
