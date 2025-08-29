@@ -2,11 +2,11 @@
 ---
 
 ## 6. Publicação no GeoServer
-A publicação ocorre automaticamente:
+A publicação é realizada em conjunto com a equipe do INPE de São José dos Campos (BIG):
 
-1. Criação do workspace `diptc`.
-2. Criação do store `merge-daily` (ImageMosaic com conexão via PostGIS).
-3. Aplicação do estilo `merge-daily.sld`.
+1. Criação do workspace `Ex.: diptc`.
+2. Criação do store `Ex.: merge-daily` (ImageMosaic com conexão via PostGIS e habilitação do tempo).
+3. Aplicação do estilo `Ex.: merge-daily.sld`.
 
 ---
 

@@ -3,7 +3,7 @@
 
 ## 4. Tecnologias Utilizadas
 - **Python 3**
-- Bibliotecas: `rasterio`, `xarray`, `geopandas`, `psycopg2`, `requests`
+- Bibliotecas: `rasterio`, `xarray`, `geopandas`, `psycopg2`, `requests`, `...`
 - **PostgreSQL/PostGIS** (Docker)
 - **GeoServer** (Docker)
 - **Docker volumes**

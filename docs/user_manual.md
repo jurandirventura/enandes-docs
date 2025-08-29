@@ -2,13 +2,25 @@
 
 ---
 
-## Manual do Usuário
+## Manual Geral do Usuário
 
-### 1. Acessar a máquina DIADEMA
-```bash
+### Acessar a máquina DIADEMA
+``` Via ssh e linha de comando bash;
 cd /scripts/enandes/enandes-processing
 
-2. Configuração
+### Instalação
+cd /scripts/enandes
+
+Utilizar o grupo `enandes` com sudo
+clone: https://github.com/dissm-inpe/enandes-processing.git
+
+Ou para Atualização (grupo `enandes`)
+cd /scripts/enandes/enandes-processing
+git fetch
+git pull 
+
+
+### Configuração
 
 Editar config/config_enandes_production.json para definir:
 
@@ -16,17 +28,17 @@ Editar config/config_enandes_production.json para definir:
 
     Ambiente Python
 
-3. Ativar ambiente Python
+### Ativar ambiente Python
 conda activate env-enandes-processing
 
-4. Execução dos Produtos
+### Execução dos Produtos
 Modo Operacional (processa data atual)
 --start_date "" --end_date ""
 
 Modo Período (intervalo específico)
 --start_date "YYYYMMDD" --end_date "YYYYMMDD"
 
-Exemplos:
+### Exemplos:
 
 MERGE-DAILY  (Processa diariamente) 
 
@@ -63,7 +75,7 @@ python3 enandes_processing/downloaders/climatology.py \
 -o /home/jurandir/data_enandes/tempo/MERGE/GPM/SPI \
 -b 2024-01-01 -e 2024-12-31  --mode spi
 
-Produtos Suportados
+###Produtos Suportados###
 
     MERGE
 
@@ -102,7 +114,7 @@ Produtos Suportados
         AMCWD
 
 
-Observações
+###Observações###
 
     Processos anuais ou de longo prazo podem ser agendados via crontab para evitar ociosidade.
 

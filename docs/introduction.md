@@ -40,6 +40,8 @@ O sistema é baseado em **scripts Python** organizados para:
 - Publicar no **GeoServer** via camada **ImageMosaic** com suporte a tempo;
 - Aplicar estilos **SLD** para visualização.
 
+---
+
 **Estrutura de diretórios:**
 
 $HOME/enandes-processing
