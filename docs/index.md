@@ -47,12 +47,12 @@ O sistema foi projetado para uso no contexto do **Projeto ENANDES**, apoiado pel
 ## 🚀 Acesso Rápido
 
 - 🌐 **Visualização online:** [ENANDES WebMap](https://satelite.cptec.inpe.br/enandes/)
-- 📂 **Código-fonte:** Disponível no repositório do projeto (`/home/jurandir/enandes-processing/`)
+- 📂 **Código-fonte:** Disponível no repositório do projeto [enandes-processing](https://github.com/dissm-inpe/enandes-processing)
 
 ---
 
-!!! note "Licença e Reutilização"
-    O sistema é aberto para uso em projetos relacionados ao ENANDES e pode ser adaptado para diferentes conjuntos de dados e países.
+"Licença e Reutilização"
+    O sistema é aberto para uso em projetos relacionados ao ENANDES.
 
 ---
 

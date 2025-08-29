@@ -22,6 +22,8 @@ Principais funcionalidades:
 - Publicação automática de camadas com suporte a tempo.
 
 O **MERGE** (Rozante et al., 2010) é processado no CPTEC/INPE a partir do **IMERGE** (Integrated Multi-satellitE Retrievals for GPM) da NASA, atualmente na versão 7B.
+- **Link do produto MERGE:** https://clima.cptec.inpe.br/monitoramentobrasil/pt
+- **Link FTP de dados MERGE:** https://ftp.cptec.inpe.br/modelos/tempo/MERGE/GPM/
 
 No contexto do **Projeto ENANDES**, a base é convertida para **GeoTIFF**, cadastrada no GeoServer e disponibilizada via serviços **WMS** em:
 [https://satelite.cptec.inpe.br/enandes/](https://satelite.cptec.inpe.br/enandes/)
@@ -32,15 +34,15 @@ No contexto do **Projeto ENANDES**, a base é convertida para **GeoTIFF**, cadas
 O sistema é baseado em **scripts Python** organizados para:
 
 - Baixar dados MERGE via HTTP  
-  `https://ftp.cptec.inpe.br/modelos/tempo/MERGE/GPM/...`
-- Converter **NetCDF** e **GRIB2** para **GeoTIFF**.
-- Popular base de dados **PostGIS** (`merge_index`).
-- Publicar no **GeoServer** via camada **ImageMosaic** com suporte a tempo.
+  `https://ftp.cptec.inpe.br/modelos/tempo/MERGE/GPM/...`;
+- Converter **NetCDF** e **GRIB2** para **GeoTIFF**;
+- Popular base de dados **PostGIS** (`merge_index`);
+- Publicar no **GeoServer** via camada **ImageMosaic** com suporte a tempo;
 - Aplicar estilos **SLD** para visualização.
 
 **Estrutura de diretórios:**
 $HOME/enandes-processing
-├── batch # Scripts de processamento e publicação
-├── config # Arquivos de configuração JSON
-├── downloaders # Módulos de download (MERGE, SPI, SPEI etc.)
-├── utils # Funções auxiliares
+- ├── batch # Scripts de processamento e publicação
+- ├── config # Arquivos de configuração JSON
+- ├── downloaders # Módulos de download (MERGE, SPI, SPEI etc.)
+- ├── utils # Funções auxiliares
