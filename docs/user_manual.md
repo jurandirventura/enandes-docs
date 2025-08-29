@@ -68,17 +68,51 @@ MERGE-SPI  (Processa memsalmente, especificamente no dia 02)
 
 Download - DAILY
 
-python3 enandes_processing/downloaders/merge_download.py \;
--i https://ftp.cptec.inpe.br/modelos/tempo/MERGE/GPM/DAILY/ \;
--o /home/jurandir/data_enandes/tempo/MERGE/GPM/ \;
+python3 enandes_processing/downloaders/merge_download.py \
+-i https://ftp.cptec.inpe.br/modelos/tempo/MERGE/GPM/DAILY/ \
+-o /home/jurandir/data_enandes/tempo/MERGE/GPM/ \
 -b 2010-01-01 -e 2010-01-05
 
 Download - SPI
 
-python3 enandes_processing/downloaders/climatology.py \;
--i https://ftp.cptec.inpe.br/modelos/tempo/MERGE/GPM/SPI \;
--o /home/jurandir/data_enandes/tempo/MERGE/GPM/SPI \;
+python3 enandes_processing/downloaders/climatology.py **(\**)
+-i https://ftp.cptec.inpe.br/modelos/tempo/MERGE/GPM/SPI **(\**)
+-o /home/jurandir/data_enandes/tempo/MERGE/GPM/SPI **(\**)
 -b 2024-01-01 -e 2024-12-31  --mode spi
+
+
+###CLIMATOLOGY### 
+
+CLIMATOLOGY DAILY AVERAGE
+
+python3 batch/operacional_process_merge_climatology_daily.py 
+--config config/config_enandes_test.json  --start_date 20240101 
+--end_date 20241231
+
+
+
+CLIMATOLOGY MONTHLY ACCUMULATED  e  CLIMATOLOGY MONTHLY AVERAGE
+
+python3 batch/operacional_process_merge_climatology_monthly.py 
+--config config/config_enandes_test.json  --start_date 20240101 
+--end_date 20241231
+
+
+
+CLIMATOLOGY MONTHLY ACCUMULATED YEARLY  e  CLIMATOLOGY MONTHLY AVERAGE YEARLY
+
+python3 batch/operacional_process_merge_climatology_monthly_yearly.py 
+--config config/config_enandes_test.json  --start_date 19980101 
+--end_date 20251231
+
+
+
+YEAR ACCUMULATED
+
+python3 batch/operacional_process_merge_climatology_year_acc.py 
+--config "config/config_enandes_production.json"  --start_date "19980101" 
+--end_date "20251231"
+
 
 ###Produtos Suportados###
 
