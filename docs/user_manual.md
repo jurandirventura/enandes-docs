@@ -11,13 +11,13 @@ cd /scripts/enandes/enandes-processing
 ### Instalação
 cd /scripts/enandes
 
-Utilizar o grupo `enandes` com sudo
-clone: https://github.com/dissm-inpe/enandes-processing.git
+Utilizar o grupo `enandes` com sudo;
+Link clone: https://github.com/dissm-inpe/enandes-processing.git
 
-Ou para Atualização (grupo `enandes`)
-cd /scripts/enandes/enandes-processing
-git fetch
-git pull 
+Ou para Atualização (grupo `enandes`);
+cd /scripts/enandes/enandes-processing;
+git fetch;
+git pull; 
 
 
 ### Configuração
@@ -29,13 +29,15 @@ Editar config/config_enandes_production.json para definir:
     Ambiente Python
 
 ### Ativar ambiente Python
+
 conda activate env-enandes-processing
 
 ### Execução dos Produtos
-Modo Operacional (processa data atual)
+
+Modo Operacional (processa data atual):
 --start_date "" --end_date ""
 
-Modo Período (intervalo específico)
+Modo Período (intervalo específico):
 --start_date "YYYYMMDD" --end_date "YYYYMMDD"
 
 ### Exemplos:
@@ -58,21 +60,24 @@ nohup python3 batch/operacional_process_merge_hourly.py \
 [![Fluxo do processo MERGE Hourly]](d02_merge_hourly.png)
 
 MERGE-SPI  (Processa memsalmente, especificamente no dia 02)
+
 ~/enandes-processing$ python3 batch/operacional_process_merge_SPIeSPEI.py \
 --config "config/config_enandes_test.json" \
 --start_date "20250822" --end_date "20250822"
 
 
 Download - DAILY
-python3 enandes_processing/downloaders/merge_download.py \
--i https://ftp.cptec.inpe.br/modelos/tempo/MERGE/GPM/DAILY/ \
--o /home/jurandir/data_enandes/tempo/MERGE/GPM/ \
+
+python3 enandes_processing/downloaders/merge_download.py \;
+-i https://ftp.cptec.inpe.br/modelos/tempo/MERGE/GPM/DAILY/ \;
+-o /home/jurandir/data_enandes/tempo/MERGE/GPM/ \;
 -b 2010-01-01 -e 2010-01-05
 
 Download - SPI
-python3 enandes_processing/downloaders/climatology.py \
--i https://ftp.cptec.inpe.br/modelos/tempo/MERGE/GPM/SPI \
--o /home/jurandir/data_enandes/tempo/MERGE/GPM/SPI \
+
+python3 enandes_processing/downloaders/climatology.py \;
+-i https://ftp.cptec.inpe.br/modelos/tempo/MERGE/GPM/SPI \;
+-o /home/jurandir/data_enandes/tempo/MERGE/GPM/SPI \;
 -b 2024-01-01 -e 2024-12-31  --mode spi
 
 ###Produtos Suportados###
@@ -111,7 +116,7 @@ python3 enandes_processing/downloaders/climatology.py \
 
         MCWD_AN
 
-        AMCWD
+        AMCWD (Não está no GeoServer mas está na base de dados).
 
 
 ###Observações###
