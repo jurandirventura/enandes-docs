@@ -8,7 +8,7 @@
 ``` Via ssh e linha de comando bash;
 cd /scripts/enandes/enandes-processing
 
-### Instalação
+###Instalação###
 cd /scripts/enandes
 
 Utilizar o grupo `enandes` com sudo;
@@ -20,7 +20,7 @@ git fetch;
 git pull; 
 
 
-### Configuração
+###Configuração###
 
 Editar config/config_enandes_production.json para definir:
 
@@ -28,11 +28,11 @@ Editar config/config_enandes_production.json para definir:
 
     Ambiente Python
 
-### Ativar ambiente Python
+###Ativar ambiente Python###
 
 conda activate env-enandes-processing
 
-### Execução dos Produtos
+###Execução dos Produtos###
 
 Modo Operacional (processa data atual):
 --start_date "" --end_date ""
@@ -40,7 +40,7 @@ Modo Operacional (processa data atual):
 Modo Período (intervalo específico):
 --start_date "YYYYMMDD" --end_date "YYYYMMDD"
 
-### Exemplos:
+###Exemplos:###
 
 MERGE-DAILY  (Processa diariamente) 
 
@@ -81,7 +81,7 @@ python3 enandes_processing/downloaders/climatology.py **(\**)
 -b 2024-01-01 -e 2024-12-31  --mode spi
 
 
-###CLIMATOLOGY### 
+###CLIMATOLOGY###
 
 CLIMATOLOGY DAILY AVERAGE
 
