@@ -7,12 +7,12 @@
 ---
 
 ## 📌 Sobre o Projeto
-Programa Associado: Projeto BIG
-Unidade Responsável: Coordenação Geral de Ciências da Terra - CGCT
-Unidade Executora: Divisão de Previsão de Tempo e Clima – DIPTC/CGCT, 
+- **Programa Associado:** Projeto BIG;
+- **Unidade Responsável:** Coordenação Geral de Ciências da Terra - CGCT;
+- **Unidade Executora:** Divisão de Previsão de Tempo e Clima – DIPTC/CGCT,
                    Divisão de Satélites e Sensores Meteorológicos - DISSM/CGCT,
-                   Divisão de Observação da Terra e Geoinformática. - DIOTG/CGCT
-Objeto do Projeto: Monitoramento da evolução de secas na agricultura e na gestão de recursos hídricos
+                   Divisão de Observação da Terra e Geoinformática. - DIOTG/CGCT;
+- **Objeto do Projeto:** Monitoramento da evolução de secas na agricultura e na gestão de recursos hídricos
                    usando produtos gerados a partir de satélites ambientais para os países do consorcio
                    ENANDES (Melhoria da Capacidade de Adaptação das Comunidades Andinas através
                    dos Serviços Climáticos).
